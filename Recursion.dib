@@ -43,3 +43,35 @@ console.log(getLength([1])); // -> 1
 console.log(getLength([1, 2])); // -> 2
 console.log(getLength([1, 2, 3, 4, 5])); // -> 5
 console.log(getLength([])); // -> 0
+
+#!javascript
+
+function pow(base, exponent){
+
+    if(exponent === 0) return 1;
+else
+//console.log(base + ':' + exponent)
+return base * pow(base, exponent - 1);
+
+}
+
+console.log(pow(2, 4)); // -> 16
+console.log(pow(3, 5)); // -> 243
+
+#!javascript
+
+function flow(input, funcArray){
+if(funcArray.length === 0) return input;
+
+const output = funcArray[0](input);
+
+return flow(output, funcArray.slice(1));
+
+}
+
+ function multiplyBy2(num) { return num * 2; }
+ function add7(num) { return num + 7; }
+ function modulo4(num) { return num % 4; }
+ function subtract10(num) { return num - 10; }
+ const arrayOfFunctions = [multiplyBy2, add7, modulo4, subtract10];
+ console.log(flow(2, arrayOfFunctions)); // -> -7
