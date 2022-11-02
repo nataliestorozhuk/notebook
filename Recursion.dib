@@ -9,3 +9,21 @@ function repeater(char){
 
 console.log(repeater('g'));
 console.log(repeater('j'));
+
+#!javascript
+
+function factorial(num, product = 1){
+    if(num === 1) return product;
+
+// 1st option 
+//const newProduct = product * num;
+//const newNum = num * 1;
+//return factorial(newNum, newProduct);
+
+
+// 2nd option 
+return factorial(num-1, product * num);
+}
+
+console.log(factorial(4));
+console.log(factorial(6));
