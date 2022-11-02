@@ -75,3 +75,21 @@ return flow(output, funcArray.slice(1));
  function subtract10(num) { return num - 10; }
  const arrayOfFunctions = [multiplyBy2, add7, modulo4, subtract10];
  console.log(flow(2, arrayOfFunctions)); // -> -7
+
+#!javascript
+
+function shuffleCards(topHalf, bottomHalf,results = []) {
+  if(topHalf.length === 0 && bottomHalf.length === 0)return results;
+  if (topHalf.length!==0) {
+  results.push(topHalf[0])
+  } 
+  if (bottomHalf.length!==0) {
+    results.push(bottomHalf[0])
+  }
+  return shuffleCards(topHalf.slice(1), bottomHalf.slice(1),results);
+}
+
+
+  const topHalf = ['Queen of Diamonds', 'Five of Hearts', 'Ace of Spades', 'Eight of Clubs'];
+  const bottomHalf = ['Jack of Hearts', 'Ten of Spades'];
+  console.log(shuffleCards(topHalf, bottomHalf));
