@@ -93,3 +93,16 @@ function shuffleCards(topHalf, bottomHalf,results = []) {
   const topHalf = ['Queen of Diamonds', 'Five of Hearts', 'Ace of Spades', 'Eight of Clubs'];
   const bottomHalf = ['Jack of Hearts', 'Ten of Spades'];
   console.log(shuffleCards(topHalf, bottomHalf));
+
+#!javascript
+
+function cascade(number) {
+  
+    number = number.toString();
+    console.log(number);
+    if (number.length === 1) return; 
+    cascade(number.slice(0, -1));
+    console.log(number);
+}
+
+ cascade(111)
