@@ -1,6 +1,8 @@
 #!csharp
 
-// Passing by value
+// Passing by value.
+// Passing by value does not effect the original value. When we are passing a value to a function
+// we are making a copy of that value.
     int age = 100;
 
 Console.WriteLine("At the beginning...");
@@ -19,7 +21,9 @@ private static void receiverMethod(int val){
 
 #!csharp
 
-// Passing by reference
+// Passing by reference.
+// Passing by reference does effect the original value. When we are passing by reference to a function
+// we are passing in the exact variable to it.
 int age = 100;
 
 Console.WriteLine("At the beginning...");
@@ -48,4 +52,20 @@ private static void receiverMethod(ref int val){
  public static void GiveExtraCredit(int studentsGrade){
     studentsGrade +=3;
     
+ }
+
+#!csharp
+
+ // Pass by reference, example 2.
+
+int[] grades = new int[1];
+
+grades[0] = 75;
+
+Console.WriteLine("Students array grade before extra credit {0}", grades[0]);
+GiveExtraCreditArray(grades);
+Console.WriteLine("Students array grade AFTER extra credit {0}", grades[0]);
+
+public static void GiveExtraCreditArray(int[] grades){
+        grades[0] +=3;
  }
