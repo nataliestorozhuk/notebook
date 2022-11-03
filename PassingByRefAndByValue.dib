@@ -1,0 +1,51 @@
+#!csharp
+
+// Passing by value
+    int age = 100;
+
+Console.WriteLine("At the beginning...");
+Console.WriteLine("Age: " + age);
+
+receiverMethod(age);
+
+Console.WriteLine("After method call...");
+Console.WriteLine("Age: " + age);
+
+
+private static void receiverMethod(int val){
+    Console.WriteLine("Value is: " + val);
+    val = 45;
+}
+
+#!csharp
+
+// Passing by reference
+int age = 100;
+
+Console.WriteLine("At the beginning...");
+Console.WriteLine("Age: " + age);
+
+receiverMethod(ref age);
+
+Console.WriteLine("After method call...");
+Console.WriteLine("Age: " + age);
+
+
+private static void receiverMethod(ref int val){
+    Console.WriteLine("Value is: " + val);
+    val = 45;
+}
+
+#!csharp
+
+ // Pass by value, example 2.
+
+ int student1Grade = 75;
+ Console.WriteLine("Students grade before extra credit {0}", student1Grade);
+ GiveExtraCredit(student1Grade);
+ Console.WriteLine("Students grade AFTER extra ctedit {0}", student1Grade);
+
+ public static void GiveExtraCredit(int studentsGrade){
+    studentsGrade +=3;
+    
+ }
