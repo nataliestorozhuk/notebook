@@ -67,5 +67,5 @@ GiveExtraCreditArray(grades);
 Console.WriteLine("Students array grade AFTER extra credit {0}", grades[0]);
 
 public static void GiveExtraCreditArray(int[] grades){
-        grades[0] +=3;
+        grades[0] +=4;
  }
