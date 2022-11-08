@@ -87,3 +87,16 @@ const sumMe = {
     }
   }
   console.log(total);
+
+#!javascript
+
+function StartGame() {
+    let input;
+    input = prompt("Welcome to Blackjack. Do you want to play? (Y)es or (N)o").toUpperCase();
+  
+    if (input == 'Y') {
+      console.log("Game starting...")
+    }
+  }
+  
+  StartGame();
