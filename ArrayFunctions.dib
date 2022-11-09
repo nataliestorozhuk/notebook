@@ -129,3 +129,88 @@ const saladCopy = salad.slice();
 console.log(saladCopy);
 
 salad === saladCopy; // returns false
+
+#!javascript
+
+// How to Use the Spread Operator.
+const salad = ['tomato', 'onion', 'corn', 'carrot', 'avocado'];
+const saladCloned = [...salad];
+console.log(saladCloned);
+
+#!javascript
+
+// How to Merge Arrays.
+const names = ['Nata', 'Sasha', 'Sarah'];
+const veggies = ['tomato', 'onion', 'corn', 'carrot', 'avocado'];
+
+const namesVeggies = [...names, ...veggies];
+console.log(namesVeggies)
+
+#!javascript
+
+// The filter() method creates a new array with all the elements 
+// that satisfies the condition mentioned in the function. 
+let students = [
+    {
+       'id': 001,
+       'f_name': 'Alex',
+       'l_name': 'B',
+       'gender': 'M',
+       'married': false,
+       'age': 22,
+       'paid': 250,  
+       'courses': ['JavaScript', 'React']
+    },
+    {
+       'id': 002,
+       'f_name': 'Ibrahim',
+       'l_name': 'M',
+       'gender': 'M',
+       'married': true,
+       'age': 32,
+       'paid': 150,  
+       'courses': ['JavaScript', 'PWA']
+    },
+    {
+       'id': 003,
+       'f_name': 'Rubi',
+       'l_name': 'S',
+       'gender': 'F',
+       'married': false,
+       'age': 27,
+       'paid': 350,  
+       'courses': ['Blogging', 'React', 'UX']
+    },
+    {
+       'id': 004,
+       'f_name': 'Zack',
+       'l_name': 'F',
+       'gender': 'M',
+       'married': true,
+       'age': 36,
+       'paid': 250,  
+       'courses': ['Git', 'React', 'Branding']
+    } 
+ ];
+
+const femaleStudents = students.filter((element, index) => {
+    return element.gender === 'F';
+  })
+  
+  console.log(femaleStudents);
+
+#!javascript
+
+// The map() method creates a new array by iterating through the elements and 
+// applying logic we provided in the function as an argument.
+
+let numbers = [2, 4, 6, 8, 10];
+
+// function to return the square of a number
+function square(number) {
+  return number * number;
+}
+
+// apply square() function to each item of the numbers list
+let square_numbers = numbers.map(square);
+console.log(square_numbers);
