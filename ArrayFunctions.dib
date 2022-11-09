@@ -100,3 +100,32 @@ function StartGame() {
   }
   
   StartGame();
+
+#!javascript
+
+// How to Remove Elements from an Array.Every time you call the pop() method, it removes an element 
+// from the end of the array.
+
+const salad = ['tomato', 'onion', 'corn'];
+salad.pop();
+console.log(salad);
+
+#!javascript
+
+// shift() method to remove an element from the beginning of an array.
+
+const salad = ['tomato', 'onion', 'corn'];
+salad.shift();
+console.log(salad);
+
+#!javascript
+
+// How to Copy and Clone an Array.
+// slice() method doesn't change the original array. Instead, it creates a new shallow copy of the original array.
+
+const salad = ['tomato', 'onion', 'corn'];
+const saladCopy = salad.slice();
+
+console.log(saladCopy);
+
+salad === saladCopy; // returns false
