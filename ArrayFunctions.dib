@@ -163,6 +163,7 @@ console.log(result);
 // The map() method creates a new array by iterating through the elements and 
 // applying logic we provided in the function as an argument.
 
+// Example 1.
 let numbers = [2, 4, 6, 8, 10];
 
 // function to return the square of a number
@@ -173,6 +174,16 @@ function square(number) {
 // apply square() function to each item of the numbers list
 let square_numbers = numbers.map(square);
 console.log(square_numbers);
+
+
+// Example 2.
+const array1 = [1, 4, 9, 16];
+
+// pass a function to map. X is every element in the array.
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
 
 #!javascript
 
@@ -237,3 +248,21 @@ const found = array1.find(element => element > 10);
 
 console.log(found);
 // expected output: 12
+
+#!javascript
+
+// The includes() method determines whether an array includes a 
+// certain value among its entries, returning true or false as appropriate.
+
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// expected output: true
+
+console.log(pets.includes('at'));
+// expected output: false
