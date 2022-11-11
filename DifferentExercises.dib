@@ -144,3 +144,35 @@ function callFriend(bool, name) {
 console.log(makePlans("Mary")) // should return: "Plans made with Mary this weekend'
 friendsAvailable = false;
 console.log(makePlans("James")) //should return: "Everyone is busy this weekend."
+
+#!javascript
+
+function isOdd(num){
+    if(num %2 != 0){
+      return true;
+        }
+    else{
+      return false;
+    }
+  }
+  
+  console.log(isOdd(5)); // should log: true
+  console.log(isOdd(2008)); // should log: false
+
+#!javascript
+
+function getRemainder(num1, num2) {
+     if(num1 > num2){
+    return num1%num2
+  }  
+  else{
+     return  num2%num1;
+  }
+   
+  }
+  
+  
+  console.log(getRemainder(17, 5)); // => 2
+  console.log(getRemainder(20, 5)); // => 0
+  console.log(getRemainder(8, 22)); // => 6
+  console.log(getRemainder(7, 42)); // => 0
