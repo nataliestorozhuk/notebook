@@ -100,3 +100,47 @@ function StartGame() {
   }
   
   StartGame();
+
+#!javascript
+
+const x = 3;
+
+function isX1(num) {
+    const x = 5;
+    return num === x;
+}
+
+function isX2(num) {
+    return num === x;
+}
+
+const one = isX1(5);
+const two = isX2(3);
+
+
+console.log(one); // should log: true
+console.log(two); // should log: true
+
+#!javascript
+
+let friendsAvailable = true;
+
+function makePlans(name) {
+
+  return callFriend(friendsAvailable, name);
+}
+
+function callFriend(bool, name) {
+
+  if (bool == true){
+   return "Plans made with" + " " + name + " "  + "this weekend";
+  }
+  else{
+   return "Everyone is busy this weekend";
+  }
+}
+
+
+console.log(makePlans("Mary")) // should return: "Plans made with Mary this weekend'
+friendsAvailable = false;
+console.log(makePlans("James")) //should return: "Everyone is busy this weekend."
