@@ -320,6 +320,7 @@ console.log(Seasons.Winter)
 #!javascript
 
 // global data.
+
 /*let gameState = {
     gameOver: false,
     player: [],
@@ -328,6 +329,7 @@ console.log(Seasons.Winter)
     computerScore: 0,
     deck: []
 };*/
+
 let gameOver = false;
 let player = '';
 let computer = '';
