@@ -306,7 +306,7 @@ function addingAllTheWeirdStuff(array1, array2) {
 
 #!javascript
 
-// Enumas
+// Enums
 const Seasons = {
     Summer: 0,
     Autumn: 1,
@@ -316,6 +316,38 @@ const Seasons = {
 
 
 console.log(Seasons.Winter)
+
+#!csharp
+
+// Enums, example 2. Ho to use them.
+
+enum Level 
+{
+  Low,
+  Medium,
+  High
+}
+
+Level myVar = Level.Medium;
+Console.WriteLine(myVar);
+
+#!csharp
+
+// Enum example in a class.
+class Program
+{
+  enum Level
+  {
+    Low,
+    Medium,
+    High
+  }
+  static void Main(string[] args)
+  {
+    Level myVar = Level.Medium;
+    Console.WriteLine(myVar);
+  }
+}
 
 #!javascript
 
@@ -393,3 +425,5 @@ function createDeck()
         }
     }
 }
+
+console.log(createDeck());
