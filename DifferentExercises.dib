@@ -465,3 +465,78 @@ let x = myFunction(4, 3);   // Function is called, return value will end up in x
 function myFunction(a, b) {
   return a * b;             // Function returns the product of a and b
 }
+
+#!javascript
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace classes
+{
+    public partial class frmMainClasses : Form
+    {
+        string EmpShift = "";
+        string EmployeeName = "";
+        int EmployeeNumber = 0;
+        float HourlyPayRate = 0;
+
+
+
+        public class Employee
+        {
+            public string EmployeeName { get; set; }
+            public int EmployeeNumber { get; set; }
+        }
+
+        public class ProductionWorker : Employee
+        {
+            public float HourlyPayRate { get; set; }
+            public Shift Shift { get; set; }
+        }
+
+        public enum Shift
+        {
+            Day = 1,
+            Night = 2
+        }
+
+        public frmMainClasses()
+        {
+            InitializeComponent();
+        }
+
+        private void btxExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGetInfo_Click(object sender, EventArgs e)
+        {
+            string EmpShift = "";
+            ProductionWorker productionWorker = new ProductionWorker();
+            productionWorker.EmployeeName = txtName.ToString();
+            EmployeeName = productionWorker.EmployeeName; //Added mostly because I couldn't get EmployeeName to show anything in the messagebox
+            productionWorker.EmployeeNumber = Convert.ToInt32(txtIdNumb.text);
+            productionWorker.HourlyPayRate = Convert.ToInt32(txtPay.text);
+            EmpShift = Convert.ToString(txtShift.text);
+            txtName.Text = "";
+            txtIdNumb.Text = "";
+            txtPay.Text = "";
+            txtShift.Text = "";
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Name " + EmployeeName + "IDNumber " + EmployeeNumber + "Hourly rate " + txtPay + "Shift " + txtShift);
+
+        }
+    }
+
+}
