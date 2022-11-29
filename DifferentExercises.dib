@@ -543,8 +543,9 @@ namespace classes
 
 #!javascript
 
+// apllying discount to prices with map function
 const prices = [10, 20, 30, 40, 50];
-
+//using errow function
 const discount = prices.map((price)=>price * 26/100)
 
 console.log(discount);
