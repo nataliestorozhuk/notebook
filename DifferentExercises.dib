@@ -549,3 +549,70 @@ const prices = [10, 20, 30, 40, 50];
 const discount = prices.map((price)=>price * 26/100)
 
 console.log(discount);
+
+#!javascript
+
+const people = [
+    'Creola Katherine Johnson: mathematician',
+    'Mario José Molina-Pasquel Henríquez: chemist',
+    'Mohammad Abdus Salam: physicist',
+    'Percy Lavon Julian: chemist',
+    'Subrahmanyan Chandrasekhar: astrophysicist'
+  ];
+
+  const people = [{
+    id: 0,
+    name: 'Creola Katherine Johnson',
+    profession: 'mathematician',
+  }, {
+    id: 1,
+    name: 'Mario José Molina-Pasquel Henríquez',
+    profession: 'chemist',
+  }, {
+    id: 2,
+    name: 'Mohammad Abdus Salam',
+    profession: 'physicist',
+  }, {
+    name: 'Percy Lavon Julian',
+    profession: 'chemist',  
+  }, {
+    name: 'Subrahmanyan Chandrasekhar',
+    profession: 'astrophysicist',
+  }];
+
+
+  export default function List() {
+    const listItems = people.map(person =>
+      <li>{person}</li>
+    );
+    return <ul>{listItems}</ul>;
+  }
+
+#!javascript
+
+//Keys allow React to keep track of elements. This way, if an item is updated or removed, 
+// only that item will be re-rendered instead of the entire list.
+
+Keys need to be unique to each sibling. But they can be duplicated globally.
+function Car(props) {
+    return <li>I am a { props.brand }</li>;
+  }
+  
+  function Garage() {
+    const cars = [
+      {id: 1, brand: 'Ford'},
+      {id: 2, brand: 'BMW'},
+      {id: 3, brand: 'Audi'}
+    ];
+    return (
+      <>
+        <h1>Who lives in my garage?</h1>
+        <ul>
+          {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
+        </ul>
+      </>
+    );
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<Garage />);
